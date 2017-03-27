@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 240px;
+            height: 206px;
+            /*background: red;*/
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes donghua {
+            0%{
+                bottom: -50px;
+            }
+            100%{
+                bottom: 0;
+            }
+        }
+        .desc{
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            bottom: -50px;
+            color: #fff;
+            background: -webkit-gradient(linear, left top, left bottom
+            , color-stop(0, transparent), color-stop(1, rgba(0, 0, 0, 0.9)));
+        }
+
+        .box:hover .desc {
+            display: block;
+            animation: donghua 1s forwards;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <img src="images2/bj" alt="">
+    <div class="desc">
+        <h3>北京</h3>
+        <p>asdffjweeeefdsa</p>
+    </div>
+</div>
+
+</body>
+</html>

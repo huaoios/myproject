@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>西米</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 12px;
+            color: #444;
+        }
+        .clearfix:after{
+            content: '';
+            height: 0;
+            line-height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+        .clearfix{
+            zoom: 1;
+        }
+        a{
+            text-decoration: none;
+            color: #444;
+        }
+        a:hover{
+            color: red;
+        }
+        li {
+            list-style: none;
+        }
+        .toubu {
+            height: 26px;
+            background-color: #F7F7F7;
+            border-bottom: 1px solid #D8D8D8;
+        }
+        .toubu_nr {
+            width: 970px;
+            height: 26px;
+            margin: 0 auto;
+        }
+        .nr_zuo{
+            float: left;
+            line-height: 26px;
+        }
+        .nr_you{
+            float: right;
+        }
+        .nr_you li{
+            float: left;
+            line-height: 26px;
+            padding-right: 10px;
+        }
+        /* E 头部*/
+        /* S 标志*/
+        .biaozhi{
+            width: 970px;
+            height: 98px;
+            margin: 0 auto;
+        }
+        .tupian{
+            float: left;
+            width: 204px;
+            height: 54px;
+            background: url("imagesMeilan/biaozhi.gif");
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+        .sousuo{
+            padding: 5px 5px 5px 4px;
+            width: 519px;
+            height: 30px;
+            border: 1px solid #C9C9C9;
+            float: right;
+            margin-top: 29px;
+        }
+        .shuru{
+            width: 420px;
+            height: 30px;
+            float: left;
+            border: none;
+            background: url("imagesMeilan/shuru.gif");
+        }
+        /* E 标志*/
+        /* S 导航*/
+        .daohang{
+            width: 970px;
+            height: 27px;
+            margin: 0 auto;
+            background: url("imagesMeilan/daohang.png");
+            margin-bottom: 10px;
+        }
+        .daohang ul li{
+            float: left;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            font-size: 14px;
+            padding: 0 15px;
+            line-height: 25px;
+        }
+        .daohang span{
+            color: white;
+        }
+        .guanggao {
+            width: 970px;
+            height: 210px;
+            margin: 0 auto;
+            margin-bottom: 14px;
+        }
+        .gg_zuo{
+            width: 200px;
+            height: 210px;
+            float: left;
+            overflow: hidden;
+        }
+        .gg_zuo ul{
+            height: 180px;
+            padding-top: 13px;
+            background: #ebf0f6 url("imagesMeilan/renxing.gif") no-repeat;
+            padding-left: 38px;
+        }
+        .gg_zuo ul li{
+            height: 28px;
+        }
+        .gg_zhong{
+            width: 520px;
+            height: 210px;
+            margin: 0 10px;
+            float: left;
+            background: #ADADAD;
+            position: relative;
+        }
+        .gg_zhong img{
+            width: 520px;
+            height: 210px;
+            background-color: red;
+        }
+        .gg_dh {
+            position: absolute;
+            bottom: 0;
+            width: 520px;
+            height: 30px;
+            background-color: #cccccc;
+        }
+        .gg_dh ul{
+            float: right;
+        }
+        .gg_dh ul li{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+        .gg_you{
+            width: 230px;
+            height: 210px;
+            float: left;
+        }
+        .you_s{
+            width: 228px;
+            height: 93px;
+            border: 1px solid #E0E6F0;
+            background: #F7FAFF;
+            margin-bottom: 20px;
+        }
+        .you_s h1{
+            margin: 7px 0 0 18px;
+            font-size: 12px;
+        }
+        .you_s_fh{
+            overflow: hidden;
+            height: 74px;
+            background: url("imagesMeilan/dzb.gif") no-repeat 10px 20px;
+        }
+        .you_s_fh p{
+            margin: 24px 0 0 59px;
+        }
+        .you_x {
+            width: 230px;
+            height: 95px;
+            background: #F7F7F7;
+        }
+        .you_x_wt{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #B2B2B2;
+        }
+        .you_x_dh {
+            background: url(imagesMeilan/dianhua.gif) no-repeat 50px center;
+            text-align: center;
+            color: #51A5E3;
+            font-size: 14px;
+        }
+        .zx{
+            margin: 8px 0 0 75px;
+        }
+        .jzcl{
+            width: 948px;
+            margin: 0 auto;
+            height: 34px;
+            border-top: 2px solid #c3d7e4;
+            background: #ECF1F7;
+            font-size: 14px;
+            line-height: 34px;
+            padding-left: 22px;
+            margin-bottom: 11px;
+        }
+        .shangpin{
+            width: 970px;
+            margin: 0 auto;
+        }
+        .sp_zuo{
+            width: 719px;
+            height: 312px;
+            border: 1px solid #D8D8D8;
+            float: left;
+            padding: 15px 3px 17px 5px;
+        }
+        .sp_you{
+            width: 228px;
+            height: 344px;
+            border: 1px solid #D8D8D8;
+            float: right;
+        }
+        .sp_z_jt {
+            width: 698px;
+            height: 143px;
+            padding-left: 21px;
+        }
+        .jt_z{
+            width: 349px;
+            height: 143px;
+            float: left;
+        }
+        .jt_z_tp{
+            width: 99px;
+            height: 143px;
+            float: left;
+        }
+        .jt_z_xx{
+            width: 250px;
+            height: 143px;
+            float: left;
+        }
+        .sp_z_jy {
+            border-bottom: 1px solid #EEEEEE;
+            margin: 14px 0 11px 0;
+        }
+        .sp_you ul {
+            margin-top: 11px;
+            margin-left: 10px;
+        }
+        .sp_you ul li {
+            height: 24px;
+            line-height: 24px;
+            padding-left: 13px;
+            background: url(imagesMeilan/fk.gif) no-repeat left center;
+        }
+        .neirong{
+            width: 970px;
+            height: 810px;
+            margin: 0 auto;
+            background: green;
+        }
+
+        .lianjie{
+            height: 102px;
+            width: 970px;
+            margin: 0 auto;
+            border-top: 1px solid #DDDDDD;
+        }
+        .lianjie .yq {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .erhang {
+            margin-top: 10px;
+            margin-left: 58px;
+        }
+        .dibu {
+            width: 970px;
+            margin: 0 auto;
+            height: 90px;
+            border-top: 3px solid #0A7EC3;
+            text-align: center;
+        }
+        .dibu span {
+            display:inline-block;
+            margin-top: 13px;
+            height: 26px;
+            line-height: 26px;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="toubu">
+    <div class="toubu_nr">
+        <div class="nr_zuo">
+            您好！欢迎来到建材网！
+        </div>
+        <div class="nr_you">
+            <ul>
+                <li><a href="#">建材网首页</a></li>
+                <li><a href="#">我的商务室<img src="imagesMeilan/sanjiao.gif" /></a></li>
+                <li><a href="#">我的收藏<img src="imagesMeilan/sanjiao.gif" /></a></li>
+                <li><a href="#">建材服务<img src="imagesMeilan/sanjiao.gif" /></a></li>
+                <li><a href="#">客务中心</a></li>
+                <li><a href="#">网站导航<img src="imagesMeilan/sanjiao.gif" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- E 头部 -->
+<!-- S 标志 -->
+<div class="biaozhi">
+    <div class="tupian"></div>
+    <div class="sousuo">
+        <input type="text" class="shuru" />
+        <input type="image" src="imagesMeilan/sousuo.gif" class="chaxun" />
+    </div>
+</div>
+<!-- E 标志 -->
+<!-- S 导航 -->
+<div class="daohang">
+    <ul>
+        <li><a href="#"><span>首页</span></a></li>
+        <li><a href="#">儿童安全座椅</a></li>
+        <li><a href="#">建材</a></li>
+        <li><a href="#">工艺美术品</a></li>
+    </ul>
+</div>
+<!-- E 导航 -->
+<!-- S 广告 -->
+<div class="guanggao">
+    <div class="gg_zuo">
+        <h1>商机市场</h1>
+        <ul>
+            <li><a href="#">建筑材料</a></li>
+            <li><a href="#">儿童安全座椅</a></li>
+            <li><a href="#">工艺美术品</a></li>
+            <li><a href="#">建筑材料</a></li>
+            <li><a href="#">儿童安全座椅</a></li>
+            <li><a href="#">工艺美术品</a></li>
+        </ul>
+    </div>
+    <div class="gg_zhong">
+        <img src="" alt="">
+        <div class="gg_dh">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="gg_you">
+        <div class="you_s">
+            <h1>建材通大众版</h1>
+            <div class="you_s_fh">
+                <p>价格实惠,良心为营销预算不<br/>多的供应商所设。<a href="#">了解详情</a></p>
+            </div>
+        </div>
+        <div class="you_x">
+            <p class="you_x_wt">找信息或者发信息遇到问题？</p>
+            <p class="you_x_dh">1933-98127893</p>
+            <input type="image" src="imagesMeilan/qq.gif" class="zx">
+        </div>
+    </div>
+</div>
+
+<!-- S  建筑材料 -->
+<h1 class="jzcl">建筑材料</h1>
+<!-- E  建筑材料 -->
+
+<div class="shangpin clearfix">
+    <div class="sp_zuo">
+        <div class="sp_z_jt">
+            <div class="jt_z">
+                <div class="jt_z_tp">
+                    <div class="jt_z_tp_s">
+                        <img src="imagesMeilan/sp_img.gif" >
+                    </div>
+                    <input src="imagesMeilan/mmm.gif" type="image" class="jt_z_tp_x">
+                </div>
+                <div class="jt_z_xx">
+                    <p class="htt">好太太晒衣架 铝钛合金 升降双杠</p>
+                    <p class="zdhd">自动换档 安全耐用<br/>自动换档 安全耐用</p>
+                    <p class="jg"><span class="xj">239.00</span>&nbsp;&nbsp;&nbsp;<del>￥386.00</del></p>
+                    <p class="xl">限量<span class="xj">99</span>件，已售出<span class="xj">20</span>件</p>
+                </div>
+            </div>
+
+            <div class="jt_z">
+                <div class="jt_z_tp">
+                    <div class="jt_z_tp_s">
+                        <img src="imagesMeilan/sp_img.gif" >
+                    </div>
+                    <input src="imagesMeilan/mmm.gif" type="image" class="jt_z_tp_x">
+                </div>
+                <div class="jt_z_xx">
+                    <p class="htt">好太太晒衣架 铝钛合金 升降双杠</p>
+                    <p class="zdhd">自动换档 安全耐用<br/>自动换档 安全耐用</p>
+                    <p class="jg"><span class="xj">239.00</span>&nbsp;&nbsp;&nbsp;<del>￥386.00</del></p>
+                    <p class="xl">限量<span class="xj">99</span>件，已售出<span class="xj">20</span>件</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sp_z_jy"></div>
+
+        <div class="sp_z_jt">
+            <div class="jt_z">
+                <div class="jt_z_tp">
+                    <div class="jt_z_tp_s">
+                        <img src="imagesMeilan/sp_img.gif" >
+                    </div>
+                    <input type="image" class="jt_z_tp_x" src="imagesMeilan/mmm.gif">
+                </div>
+                <div class="jt_z_xx">
+                    <p class="htt">好太太晒衣架 铝钛合金 升降双杠</p>
+                    <p class="zdhd">自动换档 安全耐用<br/>自动换档 安全耐用</p>
+                    <p class="jg"><span class="xj">239.00</span>&nbsp;&nbsp;&nbsp;<del>￥386.00</del></p>
+                    <p class="xl">限量<span class="xj">99</span>件，已售出<span class="xj">20</span>件</p>
+                </div>
+            </div>
+            <div class="jt_z">
+                <div class="jt_z_tp">
+                    <div class="jt_z_tp_s">
+                        <img src="imagesMeilan/sp_img.gif" >
+                    </div>
+                    <input type="image" class="jt_z_tp_x" src="imagesMeilan/mmm.gif">
+                </div>
+                <div class="jt_z_xx">
+                    <p class="htt">好太太晒衣架 铝钛合金 升降双杠</p>
+                    <p class="zdhd">自动换档 安全耐用<br/>自动换档 安全耐用</p>
+                    <p class="jg"><span class="xj">239.00</span>&nbsp;&nbsp;&nbsp;<del>￥386.00</del></p>
+                    <p class="xl">限量<span class="xj">99</span>件，已售出<span class="xj">20</span>件</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sp_you">
+        <h1>建材资讯</h1>
+        <ul>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+            <li><a href="#">贵阳钢材市场7月17日价格行情</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="neirong"></div>
+
+<div class="lianjie">
+    <p class="yq">友情链接:百度 新浪新闻 搜狐视频 百度 新浪新闻 搜狐视频 百度 新浪新闻 搜狐视频 百度 新浪新闻 搜狐视频 百度 新浪新闻 搜狐视频 百度 新浪新闻 搜狐视频 百度 新浪新闻</p>
+    <p class="erhang">搜狐视频 百度 新浪新闻 搜狐视频 </p>
+</div>
+
+<div class="dibu">
+    <span>关于我们</span> | <span>建材通市场</span> | <span>蝇嘲胃地蝟顶替有人</span> | <span>蝇嘲胃地蝟顶替有人蝇嘲胃地蝟顶替有人</span> |  <span>建材通市场</span> | <span>蝇嘲胃地蝟顶替有人蝇嘲胃地蝟顶替有人蝇嘲胃地蝟顶替有人蝇嘲胃地蝟顶替有人建材通市场</span> | <span>蝇嘲胃地蝟顶替有人</span> | <span>建材通市场</span> | <span>建材通市场</span>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
